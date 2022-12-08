@@ -1,0 +1,458 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "Zm7dKD",
+    "name": "OpcoesDioalog",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "ig6Nf7"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "EaWeNk"
+          },
+          "property": "user.choice"
+        },
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "pw6OpN"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "prompt": "${ChoiceInput_Prompt_pw6OpN()}",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "style": "heroCard",
+          "choices": [
+            "Ver Cursos",
+            "Matricular-se",
+            "Ver Matrícula"
+          ],
+          "property": "user.choice",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "defaultValue": "=this.value"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "oCjfEz"
+          },
+          "condition": "user.choice",
+          "cases": [
+            {
+              "actions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "kA8rBW"
+                  },
+                  "property": "user.item"
+                },
+                {
+                  "$kind": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "gTKKco"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "prompt": "${ChoiceInput_Prompt_gTKKco()}",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or ",
+                    "inlineOr": " or ",
+                    "inlineSeparator": ", "
+                  },
+                  "style": "heroCard",
+                  "choices": [
+                    "JLPT 日本語能力試験",
+                    "HIRAGANA ひらがな",
+                    "KATAKANA カタカナ",
+                    "KANJI 漢字"
+                  ],
+                  "property": "user.item",
+                  "recognizerOptions": {
+                    "recognizeOrdinals": true
+                  },
+                  "defaultValue": "=this.value"
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "20rRXe"
+                  },
+                  "condition": "=user.item==\"HIRAGANA ひらがな\"",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "z4beNi"
+                      },
+                      "activity": "${SendActivity_z4beNi()}"
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.IfCondition",
+                      "$designer": {
+                        "id": "cHbSKl"
+                      },
+                      "condition": "=user.item==\"KATAKANA カタカナ\"",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "sMIfxs"
+                          },
+                          "activity": "${SendActivity_sMIfxs()}"
+                        }
+                      ],
+                      "elseActions": [
+                        {
+                          "$kind": "Microsoft.IfCondition",
+                          "$designer": {
+                            "id": "W5wZne"
+                          },
+                          "condition": "=user.item==\"KANJI 漢字\"",
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.SendActivity",
+                              "$designer": {
+                                "id": "FVlskH"
+                              },
+                              "activity": "${SendActivity_FVlskH()}"
+                            }
+                          ],
+                          "elseActions": [
+                            {
+                              "$kind": "Microsoft.IfCondition",
+                              "$designer": {
+                                "id": "V92Q8h"
+                              },
+                              "condition": "=user.item==\"JLPT 日本語能力試験\"",
+                              "actions": [
+                                {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "t6350i"
+                                  },
+                                  "activity": "${SendActivity_t6350i()}"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "value": "Ver Cursos"
+            },
+            {
+              "actions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "xYz6sz"
+                  },
+                  "property": "user.curso"
+                },
+                {
+                  "$kind": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "D7jocS"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "prompt": "${ChoiceInput_Prompt_D7jocS()}",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or ",
+                    "inlineOr": " or ",
+                    "inlineSeparator": ", "
+                  },
+                  "style": "heroCard",
+                  "choices": [
+                    "JLPT 日本語能力試験",
+                    "HIRAGANA ひらがな",
+                    "KATAKANA カタカナ",
+                    "KANJI 漢字"
+                  ],
+                  "recognizerOptions": {
+                    "recognizeOrdinals": true
+                  },
+                  "defaultValue": "=this.value",
+                  "property": "user.curso"
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "DoeLtV"
+                  },
+                  "condition": "=user.curso==\"HIRAGANA ひらがな\"",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "emIwY7"
+                      },
+                      "activity": "${SendActivity_emIwY7()}"
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.IfCondition",
+                      "$designer": {
+                        "id": "sbazXu"
+                      },
+                      "condition": "=user.curso==\"KATAKANA カタカナ\"",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "lQONiL"
+                          },
+                          "activity": "${SendActivity_lQONiL()}"
+                        }
+                      ],
+                      "elseActions": [
+                        {
+                          "$kind": "Microsoft.IfCondition",
+                          "$designer": {
+                            "id": "pr829g"
+                          },
+                          "condition": "=user.curso==\"KANJI 漢字\"",
+                          "actions": [
+                            {
+                              "$kind": "Microsoft.SendActivity",
+                              "$designer": {
+                                "id": "8zIURT"
+                              },
+                              "activity": "${SendActivity_8zIURT()}"
+                            }
+                          ],
+                          "elseActions": [
+                            {
+                              "$kind": "Microsoft.IfCondition",
+                              "$designer": {
+                                "id": "pPA165"
+                              },
+                              "condition": "=user.curso==\"JLPT 日本語能力試験\"",
+                              "actions": [
+                                {
+                                  "$kind": "Microsoft.SetProperty",
+                                  "$designer": {
+                                    "id": "1pmrtA"
+                                  },
+                                  "property": "user.nivel"
+                                },
+                                {
+                                  "$kind": "Microsoft.ChoiceInput",
+                                  "$designer": {
+                                    "id": "1Sb3ke"
+                                  },
+                                  "defaultLocale": "en-us",
+                                  "disabled": false,
+                                  "maxTurnCount": 3,
+                                  "alwaysPrompt": false,
+                                  "allowInterruptions": false,
+                                  "unrecognizedPrompt": "",
+                                  "invalidPrompt": "",
+                                  "prompt": "${ChoiceInput_Prompt_1Sb3ke()}",
+                                  "choiceOptions": {
+                                    "includeNumbers": true,
+                                    "inlineOrMore": ", or ",
+                                    "inlineOr": " or "
+                                  },
+                                  "property": "user.nivel",
+                                  "recognizerOptions": {
+                                    "recognizeOrdinals": true
+                                  },
+                                  "defaultValue": "=this.value",
+                                  "style": "heroCard",
+                                  "choices": [
+                                    "N5",
+                                    "N4",
+                                    "N3",
+                                    "N2",
+                                    "N1"
+                                  ]
+                                },
+                                {
+                                  "$kind": "Microsoft.IfCondition",
+                                  "$designer": {
+                                    "id": "u3wJD0"
+                                  },
+                                  "condition": "=user.nivel==\"N5\"",
+                                  "actions": [
+                                    {
+                                      "$kind": "Microsoft.SendActivity",
+                                      "$designer": {
+                                        "id": "dlToWE"
+                                      },
+                                      "activity": "${SendActivity_dlToWE()}"
+                                    }
+                                  ],
+                                  "elseActions": [
+                                    {
+                                      "$kind": "Microsoft.IfCondition",
+                                      "$designer": {
+                                        "id": "k9ru5G"
+                                      },
+                                      "condition": "=user.nivel==\"N4\"",
+                                      "actions": [
+                                        {
+                                          "$kind": "Microsoft.SendActivity",
+                                          "$designer": {
+                                            "id": "bOTYtN"
+                                          },
+                                          "activity": "${SendActivity_bOTYtN()}"
+                                        }
+                                      ],
+                                      "elseActions": [
+                                        {
+                                          "$kind": "Microsoft.IfCondition",
+                                          "$designer": {
+                                            "id": "2jGW0O"
+                                          },
+                                          "condition": "=user.nivel==\"N3\"",
+                                          "actions": [
+                                            {
+                                              "$kind": "Microsoft.SendActivity",
+                                              "$designer": {
+                                                "id": "L7g92Q"
+                                              },
+                                              "activity": "${SendActivity_L7g92Q()}"
+                                            }
+                                          ],
+                                          "elseActions": [
+                                            {
+                                              "$kind": "Microsoft.IfCondition",
+                                              "$designer": {
+                                                "id": "pcEYHf"
+                                              },
+                                              "condition": "=user.nivel==\"N2\"",
+                                              "actions": [
+                                                {
+                                                  "$kind": "Microsoft.SendActivity",
+                                                  "$designer": {
+                                                    "id": "2K2Njo"
+                                                  },
+                                                  "activity": "${SendActivity_2K2Njo()}"
+                                                }
+                                              ],
+                                              "elseActions": [
+                                                {
+                                                  "$kind": "Microsoft.IfCondition",
+                                                  "$designer": {
+                                                    "id": "JbykC1"
+                                                  },
+                                                  "condition": "=user.nivel==\"N1\"",
+                                                  "actions": [
+                                                    {
+                                                      "$kind": "Microsoft.SendActivity",
+                                                      "$designer": {
+                                                        "id": "YyLvY1"
+                                                      },
+                                                      "activity": "${SendActivity_YyLvY1()}"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "value": "Matricular-se"
+            },
+            {
+              "value": "Ver Matrícula",
+              "actions": [
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "D84CiF"
+                  },
+                  "condition": "=user.curso!=null",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "8vcL5P"
+                      },
+                      "activity": "${SendActivity_8vcL5P()}"
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "Oxb97K"
+                      },
+                      "activity": "${SendActivity_Oxb97K()}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.RepeatDialog",
+          "$designer": {
+            "id": "a6vsYh"
+          },
+          "activityProcessed": true
+        }
+      ]
+    }
+  ],
+  "generator": "OpcoesDioalog.lg",
+  "recognizer": "OpcoesDioalog.lu.qna",
+  "id": "OpcoesDioalog"
+}

@@ -1,0 +1,231 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_pw6OpN()
+[Activity
+    Text = ${ChoiceInput_Prompt_pw6OpN_text()}
+]
+
+# ChoiceInput_Prompt_pw6OpN_text()
+- Qual opção voce deseja?
+# ChoiceInput_Prompt_gTKKco()
+[Activity
+    Text = ${ChoiceInput_Prompt_gTKKco_text()}
+]
+
+# ChoiceInput_Prompt_gTKKco_text()
+- Selecione um curso para saber mais sobre: 
+# SendActivity_JA1JI0()
+[Activity
+    Text = ${SendActivity_JA1JI0_text()}
+]
+
+# SendActivity_JA1JI0_text()
+- Ok, seu ${user.item} está a caminho.
+# SendActivity_3wTOr7()
+[Activity
+    Text = ${SendActivity_3wTOr7_text()}
+]
+
+# SendActivity_3wTOr7_text()
+- Voce nao fez nenhum pedido ainda.
+# SendActivity_z4beNi()
+[Activity
+    Attachments = ${SendActivity_z4beNi_attachment_gbD4s0()}
+]
+
+# SendActivity_z4beNi_attachment_gbD4s0()
+[HeroCard
+  title = HIRAGANA
+  text = Hiragana é um dos silabários da língua japonesa. É usado para todas as palavras para as quais não exista kanji, ou este exista mas seja pouco usado. Também é usado para substituir os kanji e nas terminações dos verbos e dos adjetivos.
+  images = https://thumb.ac-illust.com/da/da4bc77768027221d2fa761b820cdc86_t.jpeg
+]
+
+# SendActivity_sMIfxs()
+[Activity
+    Attachments = ${SendActivity_sMIfxs_attachment_lHreKi()}
+]
+
+# SendActivity_sMIfxs_attachment_lHreKi()
+[HeroCard
+  title = KATAKANA
+  text = O katakana é usado geralmente em palavras importadas de línguas estrangeiras. Pode ser usado para mostrar a pronúncia de kanjis em outras línguas como o Chinês, e assim como o itálico, também pode ser usado para dar ênfase à certas palavras.
+  images = https://thumb.ac-illust.com/2d/2d4b269c206eb300f892ec4528e1b53d_t.jpeg
+]
+
+# SendActivity_FVlskH()
+[Activity
+    Attachments = ${SendActivity_FVlskH_attachment_oEKEyR()}
+]
+
+# SendActivity_FVlskH_attachment_oEKEyR()
+[HeroCard
+  title = KANJI
+  text = O kanji é um alfabeto da língua japonesa formado por ideogramas onde cada representa uma ideia concreta ou abstrata; um alfabeto derivado a partir de caracteres chineses na época da Dinastia Han
+  images = https://1.bp.blogspot.com/-D3dTcJphat4/X5OcgJu6JvI/AAAAAAABb_o/WTeEzoCJ9o0ePXpzsyR3-x7CNb9HbnpMwCNcBGAsYHQ/s484/school_text_kanji.png
+]
+
+# SendActivity_t6350i()
+[Activity
+    Attachments = ${SendActivity_t6350i_attachment_Ogtmrj()}
+]
+
+# SendActivity_t6350i_attachment_Ogtmrj()
+[HeroCard
+  title = JLPT
+  subtitle = Japanese Language Proficiency Test
+  text =  O JLPT é o exame de proficiência em Língua Japonesa. Existem 5 níveis, do N5 ao N1, sendo o N5 o mais básico e o N1 o mais avançado. As provas são compostas por sessões de gramática, vocabulário, kanji, interpretação de texto e compreensão auditiva.
+  images = https://i.ibb.co/bvsTkhC/jlpt.jpg
+]
+
+# SendActivity_8vcL5P()
+[Activity
+    Text = ${SendActivity_8vcL5P_text()}
+]
+
+# SendActivity_8vcL5P_text()
+- Você está matriculado(a) no curso:  ${user.curso}.
+# SendActivity_Oxb97K()
+[Activity
+    Text = ${SendActivity_Oxb97K_text()}
+    Attachments = ${SendActivity_Oxb97K_attachment_w43ql0()}
+]
+
+# SendActivity_Oxb97K_text()
+- Não existem matrículas registradas em nosso sistema ainda.
+# SendActivity_Oxb97K_attachment_w43ql0()
+[HeroCard
+  images = https://thumb.ac-illust.com/e7/e74bf792ca0a001cd8ddc931522d28a3_t.jpeg
+]
+
+
+# ChoiceInput_Prompt_D7jocS()
+[Activity
+    Text = ${ChoiceInput_Prompt_D7jocS_text()}
+]
+
+# ChoiceInput_Prompt_D7jocS_text()
+- Selecione o curso que deseja se matricular:
+# SendActivity_emIwY7()
+[Activity
+    Text = ${SendActivity_emIwY7_text()}
+    Attachments = ${SendActivity_emIwY7_attachment_G8ZvwP()}
+]
+
+# SendActivity_emIwY7_text()
+- Você está matriculado(a) no curso ${user.curso}
+# SendActivity_lQONiL()
+[Activity
+    Text = ${SendActivity_lQONiL_text()}
+    Attachments = ${SendActivity_lQONiL_attachment_9mrFfs()}
+]
+
+# SendActivity_lQONiL_text()
+- ```Você está matriculado(a) no curso ${user.curso}
+```
+# SendActivity_8zIURT()
+[Activity
+    Text = ${SendActivity_8zIURT_text()}
+    Attachments = ${SendActivity_8zIURT_attachment_ycihxZ()}
+]
+
+# SendActivity_8zIURT_text()
+- ```Você está matriculado(a) no curso ${user.curso}
+```
+# ChoiceInput_Prompt_1Sb3ke()
+[Activity
+    Text = ${ChoiceInput_Prompt_1Sb3ke_text()}
+]
+
+# ChoiceInput_Prompt_1Sb3ke_text()
+- Seleciona o nível do JLPT:
+# SendActivity_dlToWE()
+[Activity
+    Text = ${SendActivity_dlToWE_text()}
+    Attachments = ${SendActivity_dlToWE_attachment_5DyoLU()}
+]
+
+# SendActivity_dlToWE_text()
+- Você está matriculado(a) no curso ${user.curso} nível ${user.nivel}
+# SendActivity_bOTYtN()
+[Activity
+    Text = ${SendActivity_bOTYtN_text()}
+    Attachments = ${SendActivity_bOTYtN_attachment_USfX2S()}
+]
+
+# SendActivity_bOTYtN_text()
+- ```Você está matriculado(a) no curso ${user.curso} nível ${user.nivel}
+```
+# SendActivity_L7g92Q()
+[Activity
+    Text = ${SendActivity_L7g92Q_text()}
+    Attachments = ${SendActivity_L7g92Q_attachment_H1AQq1()}
+]
+
+# SendActivity_L7g92Q_text()
+- ```Você está matriculado(a) no curso ${user.curso} nível ${user.nivel}
+```
+# SendActivity_2K2Njo()
+[Activity
+    Text = ${SendActivity_2K2Njo_text()}
+    Attachments = ${SendActivity_2K2Njo_attachment_lWTa44()}
+]
+
+# SendActivity_2K2Njo_text()
+- ```Você está matriculado(a) no curso ${user.curso} nível ${user.nivel}
+```
+# SendActivity_YyLvY1()
+[Activity
+    Text = ${SendActivity_YyLvY1_text()}
+    Attachments = ${SendActivity_YyLvY1_attachment_neLl3W()}
+]
+
+# SendActivity_YyLvY1_text()
+- ```Você está matriculado(a) no curso ${user.curso} nível ${user.nivel}
+```
+# SendActivity_emIwY7_attachment_G8ZvwP()
+[HeroCard
+  title = Obrigado!
+  images = https://1.bp.blogspot.com/-R4rHWVbdQ8U/USNoAUA8YbI/AAAAAAAANPw/QiV2kBgzMTQ/s1600/message_arigatou.png
+]
+
+# SendActivity_lQONiL_attachment_9mrFfs()
+[HeroCard
+  title = Obrigado!
+  images = https://1.bp.blogspot.com/-R4rHWVbdQ8U/USNoAUA8YbI/AAAAAAAANPw/QiV2kBgzMTQ/s1600/message_arigatou.png
+]
+
+# SendActivity_8zIURT_attachment_ycihxZ()
+[HeroCard
+  title = Obrigado!
+  images = https://1.bp.blogspot.com/-R4rHWVbdQ8U/USNoAUA8YbI/AAAAAAAANPw/QiV2kBgzMTQ/s1600/message_arigatou.png
+]
+
+# SendActivity_dlToWE_attachment_5DyoLU()
+[HeroCard
+  title = Obrigado!
+  images = https://1.bp.blogspot.com/-R4rHWVbdQ8U/USNoAUA8YbI/AAAAAAAANPw/QiV2kBgzMTQ/s1600/message_arigatou.png
+]
+
+# SendActivity_bOTYtN_attachment_USfX2S()
+[HeroCard
+  title = Obrigado!
+  images = https://1.bp.blogspot.com/-R4rHWVbdQ8U/USNoAUA8YbI/AAAAAAAANPw/QiV2kBgzMTQ/s1600/message_arigatou.png
+]
+
+# SendActivity_L7g92Q_attachment_H1AQq1()
+[HeroCard
+  title = Obrigado!
+  images = https://1.bp.blogspot.com/-R4rHWVbdQ8U/USNoAUA8YbI/AAAAAAAANPw/QiV2kBgzMTQ/s1600/message_arigatou.png
+]
+
+# SendActivity_2K2Njo_attachment_lWTa44()
+[HeroCard
+  title = Obrigado!
+  images = https://1.bp.blogspot.com/-R4rHWVbdQ8U/USNoAUA8YbI/AAAAAAAANPw/QiV2kBgzMTQ/s1600/message_arigatou.png
+]
+
+# SendActivity_YyLvY1_attachment_neLl3W()
+[HeroCard
+  title = Obrigado!
+  images = https://1.bp.blogspot.com/-R4rHWVbdQ8U/USNoAUA8YbI/AAAAAAAANPw/QiV2kBgzMTQ/s1600/message_arigatou.png
+]
